@@ -359,17 +359,15 @@
                   </select>
                 </div>
 
-                <div class="form-group mt-3">
-                  <select
-                  name="location"
-                    class="form-select"
-                    aria-label="Default select example"
-                  >
-                    <option selected>Location</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                  </select>
+                <div class="form-group mt-2">
+                  <label for="name">City</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="city"
+                    id="subject"
+                    required
+                  />
                 </div>
 
                 <div class="form-group mt-3">
@@ -379,9 +377,43 @@
                     aria-label="Default select example"
                   >
                     <option selected>State</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                   <option selected>State</option>
+                <option value="Andaman and Nicobar (UT)">   Andaman and Nicobar (UT)</option>
+<option value="Andhra Pradesh">Andhra Pradesh</option>
+<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+<option value="Assam">Assam</option>
+<option value="Bihar">Bihar</option>
+<option value="Chandigarh">Chandigarh (UT)</option>
+<option value="Chhattisgarh">Chhattisgarh</option>
+<option value="Dadra and Nagar Haveli (UT)">Dadra and Nagar Haveli (UT)</option>
+<option value="Daman and Diu (UT)">Daman and Diu (UT)</option>
+<option value="Delhi">Delhi</option>
+<option value="Goa">Goa</option>
+<option value="Gujarat">Gujarat</option>
+<option value="Haryana">Haryana</option>
+<option value="Himachal Pradesh">Himachal Pradesh</option>
+<option value="Jammu and Kashmir">Jammu and Kashmir</option>
+<option value="Jharkhand">Jharkhand</option>
+<option value="Karnataka">Karnataka</option>
+<option value="Kerala">Kerala</option>
+<option value="Lakshadweep (UT)">Lakshadweep (UT)</option>
+<option value="Madhya Pradesh">Madhya Pradesh</option>
+<option value="Maharashtra">Maharashtra</option>
+<option value="Manipur">Manipur</option>
+<option value="Meghalaya">Meghalaya</option>
+<option value="Mizoram">Mizoram</option>
+<option value="Nagaland">Nagaland</option>
+<option value="Orissa">Orissa</option>
+<option value="Puducherry (UT)">Puducherry (UT)</option>
+<option value="Punjab">Punjab</option>
+<option value="Rajasthan">Rajasthan</option>
+<option value="Sikkim">Sikkim</option>
+<option value="Tamil Nadu">Tamil Nadu</option>
+<option value="Telangana">Telangana</option>
+<option value="Tripura">Tripura</option>
+<option value="Uttar Pradesh">Uttar Pradesh</option>
+<option value="Uttarakhand">Uttarakhand</option>
+<option value="West Bengal">West Bengal</option>
                   </select>
                 </div>
 
@@ -400,15 +432,18 @@ if(isset($_POST["baf"]))
   $number = $_POST['number'];
   $invesment = $_POST['invesment'];
   $sector = $_POST['sector'];
-  $location = $_POST['location'];
+  $city = $_POST['city'];
   $state = $_POST['state'];
   $to="vicky.vebbox@gmail.com";
   $subject="FROM BUY A FRANCHISE";
-  $text="MAIL ID : ".$mail."\r\n"."MOBILE NUMBER : ".$number."\r\n"."INVESMENT : ".$invesment."\r\n"."SECTOR : ".$sector."\r\n"."LOCATION : ".$location."\r\n"."STATE : ".$state."\r\n";
+  $text="MAIL ID : ".$mail."\r\n"."MOBILE NUMBER : ".$number."\r\n"."INVESMENT : ".$invesment."\r\n"."SECTOR : ".$sector."\r\n"."CITY : ".$city."\r\n"."STATE : ".$state."\r\n";
   
-  mail($to,$subject,$text);
-
+  if(mail($to,$subject,$text))
   echo "<script> alert('Mail send Successfully') </script>";
+  else
+  echo "<script> alert('Mail not send') </script>";
+
+
 }
 ?>
             <div
@@ -506,18 +541,18 @@ if(isset($_POST["baf"]))
                   </select>
                 </div>
 
-                <div class="form-group mt-3">
-                  <select
-                  name="location"
-                    class="form-select"
-                    aria-label="Default select example"
-                  >
-                    <option selected>Location</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                  </select>
+                <div class="form-group mt-2">
+                  <label for="name">City</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="city"
+                    id="subject"
+                    required
+                  />
                 </div>
+
+  
 
                 <div class="form-group mt-3">
                   <select
@@ -526,9 +561,43 @@ if(isset($_POST["baf"]))
                     aria-label="Default select example"
                   >
                     <option selected>State</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                <option value="Andaman and Nicobar (UT)">   Andaman and Nicobar (UT)</option>
+<option value="Andhra Pradesh">Andhra Pradesh</option>
+<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+<option value="Assam">Assam</option>
+<option value="Bihar">Bihar</option>
+<option value="Chandigarh">Chandigarh (UT)</option>
+<option value="Chhattisgarh">Chhattisgarh</option>
+<option value="Dadra and Nagar Haveli (UT)">Dadra and Nagar Haveli (UT)</option>
+<option value="Daman and Diu (UT)">Daman and Diu (UT)</option>
+<option value="Delhi">Delhi</option>
+<option value="Goa">Goa</option>
+<option value="Gujarat">Gujarat</option>
+<option value="Haryana">Haryana</option>
+<option value="Himachal Pradesh">Himachal Pradesh</option>
+<option value="Jammu and Kashmir">Jammu and Kashmir</option>
+<option value="Jharkhand">Jharkhand</option>
+<option value="Karnataka">Karnataka</option>
+<option value="Kerala">Kerala</option>
+<option value="Lakshadweep (UT)">Lakshadweep (UT)</option>
+<option value="Madhya Pradesh">Madhya Pradesh</option>
+<option value="Maharashtra">Maharashtra</option>
+<option value="Manipur">Manipur</option>
+<option value="Meghalaya">Meghalaya</option>
+<option value="Mizoram">Mizoram</option>
+<option value="Nagaland">Nagaland</option>
+<option value="Orissa">Orissa</option>
+<option value="Puducherry (UT)">Puducherry (UT)</option>
+<option value="Punjab">Punjab</option>
+<option value="Rajasthan">Rajasthan</option>
+<option value="Sikkim">Sikkim</option>
+<option value="Tamil Nadu">Tamil Nadu</option>
+<option value="Telangana">Telangana</option>
+<option value="Tripura">Tripura</option>
+<option value="Uttar Pradesh">Uttar Pradesh</option>
+<option value="Uttarakhand">Uttarakhand</option>
+<option value="West Bengal">West Bengal</option>
+
                   </select>
                 </div>
                 <div class="text-center mt-4">
@@ -541,6 +610,8 @@ if(isset($_POST["baf"]))
           </div>
         </div>
       </section>
+ 
+
 
 <?php
   if(isset($_POST['saf'])){
@@ -548,16 +619,16 @@ if(isset($_POST["baf"]))
   $number = $_POST['number'];
   $invesment = $_POST['invesment'];
   $sector = $_POST['sector'];
-  $location = $_POST['location'];
+  $city = $_POST['city'];
   $state = $_POST['state'];
   $to="vicky.vebbox@gmail.com";
   $subject="FROM SELL A FRANCHISE";
-  $text="MAIL ID : ".$mail."\r\n"."MOBILE NUMBER : ".$number."\r\n"."INVESMENT : ".$invesment."\r\n"."SECTOR : ".$sector."\r\n"."LOCATION : ".$location."\r\n"."STATE : ".$state."\r\n";
+  $text="MAIL ID : ".$mail."\r\n"."MOBILE NUMBER : ".$number."\r\n"."INVESMENT : ".$invesment."\r\n"."SECTOR : ".$sector."\r\n"."CITY : ".$city."\r\n"."STATE : ".$state."\r\n";
   
-  mail($to,$subject,$text);
-
-    echo "<script> alert('Mail send Successfully') </script>";
-
+  if(mail($to,$subject,$text))
+  echo "<script> alert('Mail send Successfully') </script>";
+  else
+  echo "<script> alert('Mail not send') </script>";
 }
   
 
@@ -1209,10 +1280,10 @@ if(isset($_POST["baf"]))
   $subject="FROM ENQURY FORM";
   $text="NAME : ".$name."\r\n"."MAIL ID : ".$mail."\r\n"."SUBJECT : ".$subject."\r\n"."MESSAGE : ".$message;
   
-  mail($to,$subject,$text);
-
-    echo "<script> alert('Mail send Successfully') </script>";
-
+  if(mail($to,$subject,$text))
+  echo "<script> alert('Mail send Successfully') </script>";
+  else
+  echo "<script> alert('Mail not send') </script>";
 }
   
 
